@@ -12,6 +12,7 @@
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <jkube.build.switchToDeployment>true</jkube.build.switchToDeployment>
     <quarkus-plugin.version>1.11.6.Final-redhat-00001</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>com.redhat.quarkus</quarkus.platform.group-id>
@@ -76,6 +77,12 @@
   </pluginRepositories>
   <build>
     <plugins>
+      <!-- JKube Maven plugin -->
+      <plugin>
+	<groupId>org.eclipse.jkube</groupId>
+        <artifactId>openshift-maven-plugin</artifactId>
+        <version>1.2.0</version>
+      </plugin>	
       <plugin>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
